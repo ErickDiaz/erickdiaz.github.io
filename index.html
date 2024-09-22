@@ -1,1 +1,196 @@
-Erick Diaz
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de Erick Díaz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .sidebar {
+            width: 30%;
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px 0;
+        }
+
+        .sidebar h2 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        .contact-links a {
+            display: block;
+            color: #0077b6;
+            text-decoration: none;
+            margin: 5px 0;
+            border: 1px solid #0077b6;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #333;
+            border-bottom: 1px solid #999;
+            margin: 20px 0 10px;
+            text-transform: uppercase;
+        }
+
+        .content {
+            width: 70%;
+            padding: 20px;
+        }
+
+        .job {
+            margin-bottom: 20px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: #005082;
+        }
+
+        .job-duration {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .job ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="src/profile.jpeg" alt="Profile Image" class="profile-image">
+            <h2>Erick Díaz</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/erickdiazs">LinkedIn: erickdiazs</a>
+                <a href="https://github.com/ErickDiaz">GitHub: ErickDiaz</a>
+            </div>
+            <div class="section-title">Education</div>
+            <p>Master’s Degree in Mathematical Engineering and Computing | 2020 - 2022</p>
+            <p>UNIR - Universidad Internacional de La Rioja</p>
+            <p>Big Data and Artificial Intelligence Specialization | 2020-2021</p>
+            <p>UNIR - Universidad Internacional de La Rioja</p>
+            <p>Bioinformatics Specialization | 2019</p>
+            <p>Universidad San Carlos de Guatemala</p>
+            <p>Computer Science Engineer | 2013</p>
+            <p>Universidad San Carlos de Guatemala</p>
+        </div>
+
+        <div class="content">
+            <div class="section-title">Work Experience</div>
+            <div class="job">
+                <div class="job-title">Sr. Data Scientist - Vana | Remote</div>
+                <div class="job-duration">Jul 2022 - Today | 2 yrs</div>
+                <ul>
+                    <li>Define new projects for the DS team based on company needs</li>
+                    <li>Create and maintain risk data science services</li>
+                    <li>Create models for micro-loan acceptance</li>
+                </ul>
+            </div>
+            <div class="job">
+                <div class="job-title">Bioinformatics software development basics Lecturer - Universidad San Carlos</div>
+                <div class="job-duration">Feb 2023 - Today | 1 yr 11 mos</div>
+            </div>
+            <div class="job">
+                <div class="job-title">Sr. Data Eng./Data Scientist - Zubale | Remote</div>
+                <div class="job-duration">Mar 2021 - Jul 2022 | 1 yr 5 mos</div>
+                <ul>
+                    <li>Develop a forecasting model for in-store demand (100+ Stores)</li>
+                    <li>Assess and interview new members of the DS team</li>
+                    <li>Collaborate in the development of a library in Python for ETLs</li>
+                </ul>
+            </div>
+            <div class="job">
+                <div class="job-title">Data Scientist - HealthCare.inc | Guatemala</div>
+                <div class="job-duration">Jan 2020 - Mar 2021 | 1 yr</div>
+                <ul>
+                    <li>Working on ETL development using Python and SQL</li>
+                    <li>Creation of a machine learning model for cost and revenue forecast using PyTorch</li>
+                </ul>
+            </div>
+            <div class="job">
+                <div class="job-title">Data Scientist 1 - Xoom | Guatemala</div>
+                <div class="job-duration">Apr 2018 - Dec 2019 | 1 yr 9 mos</div>
+                <ul>
+                    <li>Data wrangling and data pipelines for machine learning models using PySpark and TensorFlow</li>
+                </ul>
+            </div>
+            <div class="job">
+                <div class="job-title">Big Data Engineer - Xoom | Guatemala</div>
+                <div class="job-duration">Feb 2016 - Mar 2018 | 2 yrs 2 mos</div>
+                <ul>
+                    <li>Data pipelines in PySpark, Hadoop</li>
+                </ul>
+            </div>
+
+            <div class="section-title">Research and Projects</div>
+            <p>Detect and classify P. Vivax malaria parasites in blood films, the goal is to expedite the malaria parasite detection. GitHub Repo, ICLR 2020 - Workshop Conference Poster</p>
+
+            <div class="section-title">Certifications</div>
+            <ul>
+                <li>2020 Mathematics for Machine Learning Specialization - Coursera</li>
+                <li>Aug 2019 Secure & Private AI Challenge Scholarship - Udacity</li>
+                <li>Apr 2019 Introduction to TensorFlow for AI, Machine Learning, and Deep Learning - Coursera</li>
+                <li>Mar 2018 Machine Learning - Coursera</li>
+                <li>Dic 2017 Neural Networks and Deep Learning - Coursera, deeplearning.ai</li>
+                <li>Mar 2017 - Aug 2017 Deep Learning Nanodegree Foundation</li>
+                <li>Apr 2017 Big Data and Hadoop Developer Online Course - Grey Campus</li>
+                <li>Sept 2016 Hadoop Platform and Application Framework - Coursera</li>
+                <li>July 2016 Introduction to Apache Spark - Edx</li>
+            </ul>
+
+            <div class="section-title">Skills</div>
+            <ul>
+                <li>Scripting languages: Python (7 years), R, PySpark</li>
+                <li>ML Frameworks: TensorFlow, PyTorch</li>
+                <li>Big Data Ecosystems: Apache Spark, Hadoop, MapReduce, HDFS, HBase, Zookeeper, Hive</li>
+                <li>Database: SQL (6 years), Data Warehouse (2 years)</li>
+                <li>Languages: English, Spanish</li>
+            </ul>
+
+            <div class="section-title">Interests</div>
+            <ul>
+                <li>Machine Learning & Deep Learning</li>
+                <li>Bioinformatics</li>
+                <li>Federated Learning</li>
+            </ul>
+
+            <div class="section-title">Links</div>
+            <p><a href="https://github.com/ErickDiaz/bioinformatic_thesis_project/tree/dev">GitHub Bioinformatics Thesis Project</a></p>
+            <p><a href="https://www.linkedin.com/in/erickdiazs">LinkedIn Profile</a></p>
+        </div>
+    </div>
+</body>
+</html>
