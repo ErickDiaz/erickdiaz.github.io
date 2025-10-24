@@ -10,6 +10,27 @@
 
     gtag('config', 'G-QKCN48DN54');
     </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const certModal = document.getElementById('certModal');
+    const certImage = document.getElementById('certImage');
+
+    certModal.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget;
+      if (!button) return;
+      const imgSrc = button.getAttribute('data-cert');
+      if (imgSrc) {
+        certImage.src = imgSrc;
+        certImage.alt = button.previousElementSibling?.innerText || "Certificate";
+      }
+    });
+
+    // Limpia el src al cerrar (para evitar parpadeo)
+    certModal.addEventListener('hidden.bs.modal', function () {
+      certImage.src = "";
+    });
+  });
+</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -365,6 +386,157 @@
       
   </div>
   </div>
+
+<!-- ===================== CERTIFICATIONS (Carousel with Modal) ===================== -->
+<div class="shadow-1-strong bg-white my-5 p-5" id="certifications">
+  <div class="certs-section">
+    <div class="d-flex align-items-center justify-content-between">
+      <h2 class="h2 fw-light mb-4">Certifications</h2>
+      <div class="mb-4">
+        <button class="btn btn-sm btn-outline-secondary me-2" data-mdb-target="#certCarousel" data-mdb-slide="prev" aria-label="Previous">‹</button>
+        <button class="btn btn-sm btn-outline-secondary" data-mdb-target="#certCarousel" data-mdb-slide="next" aria-label="Next">›</button>
+      </div>
+    </div>
+
+    <div id="certCarousel" class="carousel slide" data-mdb-ride="carousel" data-mdb-interval="0">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row g-3">
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="text-muted small mb-1">Coursera • 2025</div>
+                  <h6 class="card-title mb-2">Retrieval Augmented Generation (RAG)</h6>
+                  <button class="btn btn-sm btn-info" data-mdb-toggle="modal" data-mdb-target="#certModal" data-cert="images/certs/rag.png">View</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="text-muted small mb-1">Coursera • 2024</div>
+                  <h6 class="card-title mb-2">Generative AI with Large Language Models (LLMs)</h6>
+                  <button class="btn btn-sm btn-info" data-mdb-toggle="modal" data-mdb-target="#certModal" data-cert="images/certs/llm.png">View</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="text-muted small mb-1">Coursera • 2020</div>
+                  <h6 class="card-title mb-2">Mathematics for Machine Learning</h6>
+                  <button class="btn btn-sm btn-info" data-mdb-toggle="modal" data-mdb-target="#certModal" data-cert="images/certs/math_ml.png">View</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="carousel-item">
+          <div class="row g-3">
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="text-muted small mb-1">Coursera • 2020</div>
+                  <h6 class="card-title mb-2">Fundamentals of Reinforcement Learning</h6>
+                  <button class="btn btn-sm btn-info" data-mdb-toggle="modal" data-mdb-target="#certModal" data-cert="images/certs/intro_rl.png">View</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="text-muted small mb-1">Udacity • 2019</div>
+                  <h6 class="card-title mb-2">Secure & Private AI Challenge Scholarship</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="text-muted small mb-1">Coursera • 2019</div>
+                  <h6 class="card-title mb-2">Intro to TensorFlow for AI, ML & DL</h6>
+                  <button class="btn btn-sm btn-info" data-mdb-toggle="modal" data-mdb-target="#certModal" data-cert="images/certs/intro_tf_ai.png">View</button>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row g-3">       
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="text-muted small mb-1">Coursera • 2019</div>
+                  <h6 class="card-title mb-2">Introduction to Probability and Data</h6>
+                  <button class="btn btn-sm btn-info" data-mdb-toggle="modal" data-mdb-target="#certModal" data-cert="images/certs/prob_data.png">View</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="text-muted small mb-1">Coursera • 2018</div>
+                  <h6 class="card-title mb-2">Machine Learning</h6>
+                  <button class="btn btn-sm btn-info" data-mdb-toggle="modal" data-mdb-target="#certModal" data-cert="images/certs/ml.png">View</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="text-muted small mb-1">Coursera • 2017</div>
+                  <h6 class="card-title mb-2">Neural Networks and Deep Learning</h6>
+                  <button class="btn btn-sm btn-info" data-mdb-toggle="modal" data-mdb-target="#certModal" data-cert="images/certs/nn_dl.png">View</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ... puedes continuar los demás slides igual -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img id="certImage" src="" alt="Certificate" class="img-fluid rounded shadow-sm">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- =================== END CERTIFICATIONS (Carousel with Modal) =================== -->
+
+
+
+
+
 
 <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
     <div class="contant-section" >
