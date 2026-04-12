@@ -55,27 +55,30 @@
     </noscript>
   </head>
   <body class="bg-light" id="top">
-    <header class="d-print-none">
-      <div class="container text-center text-lg-left">
-        <div class="pt-4 clearfix">
-          <h1 class="site-title mb-0">Erick Wilfredo Diaz Saborio</h1>
-          <div class="site-nav"> 
+    <header class="navbar-main d-print-none">
+      <div class="container">
+        <h1 class="site-title mb-0">Erick Diaz</h1>
+        <div class="nav-right">
+          <div class="site-nav" id="siteNav">
             <nav role="navigation">
-              <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#experience" title="Experience"><span class="menu-title">Experience</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio" title="Research and Projects"><span class="menu-title">Portfolio</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span class="menu-title">Contact</span></a>
-                </li>
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#about" title="About">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience" title="Experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education" title="Education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio" title="Research">Research</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications" title="Certifications">Certifications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact">Contact</a></li>
               </ul>
             </nav>
+          </div>
+          <div class="nav-actions">
+            <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode" title="Switch to dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="navbar-toggle-btn d-lg-none" id="navToggle" aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -84,15 +87,15 @@
       <div class="container">
 <div class="resume-container">
   <div class="shadow-1-strong bg-white my-5" id="intro">
-    <div class="bg-info text-white">
+    <div class="hero-section text-white">
       <div class="cover bg-image"><img src="images/header-background.webp"/>
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
+        <div class="hero-overlay">
           <div class="text-center p-5">
-            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/profile.jpeg" width="160" height="160"/></div>
+            <div class="avatar p-1"><img class="profile-img" src="images/profile.jpeg" width="160" height="160" alt="Erick Diaz"/></div>
             <div class="header-bio mt-3">
               <div data-aos="zoom-in" data-aos-delay="0">
                 <h2 class="h1">Erick Diaz</h2>
-                <p>Data Scientist | ML Engineer</p>
+                <p>Data Scientist | Lecturer at ECFM</p>
               </div>
               <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
                 <nav role="navigation">
@@ -154,7 +157,7 @@
                           <div class="col-md-6">
                               <ul class="list-group list-group-flush">
                                   <li class="list-group-item bg-transparent border-0">
-                                      <i class="fas fa-brain text-primary me-2"></i> Machine Learning & Deep Learning
+                                      <i class="fas fa-brain text-primary me-2"></i> Machine Learning &amp; Deep Learning
                                   </li>
                                   <li class="list-group-item bg-transparent border-0">
                                       <i class="fas fa-dna text-success me-2"></i> Bioinformatics
@@ -167,7 +170,10 @@
                           <div class="col-md-6">
                               <ul class="list-group list-group-flush">
                                   <li class="list-group-item bg-transparent border-0">
-                                      <i class="fas fa-robot text-info me-2"></i> AI Model Development
+                                      <i class="fas fa-robot text-info me-2"></i> Generative AI &amp; LLMs
+                                  </li>
+                                  <li class="list-group-item bg-transparent border-0">
+                                      <i class="fas fa-cogs text-secondary me-2"></i> MLOps
                                   </li>
                                   <li class="list-group-item bg-transparent border-0">
                                       <i class="fas fa-database text-danger me-2"></i> Big Data Analytics
@@ -179,10 +185,29 @@
               </div>
           </div>
       </div>
+
+      <!-- Stats Section -->
+      <div class="stats-section mt-4">
+        <div class="row g-0">
+          <div class="col-4 stat-item">
+            <i class="fas fa-laptop-code stat-icon"></i>
+            <div class="stat-number" data-target="10" data-suffix="+">0</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="col-4 stat-item">
+            <i class="fas fa-graduation-cap stat-icon"></i>
+            <div class="stat-number" data-target="3" data-suffix="">0</div>
+            <div class="stat-label">Graduate Programs</div>
+          </div>
+          <div class="col-4 stat-item">
+            <i class="fas fa-award stat-icon"></i>
+            <div class="stat-number" data-target="13" data-suffix="+">0</div>
+            <div class="stat-label">Certifications &amp; Courses</div>
+          </div>
+        </div>
+      </div>
+
   </div>
-  
-  
-  
   </div>
   <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
     <div class="skills-section">
@@ -251,120 +276,228 @@
     <div class="work-experience-section">
       <h2 class="h2 fw-light mb-4">Work Experience</h2>
       <div class="timeline">
-          <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
-              <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Sr. Data Scientist <span class="text-muted h6">at Vana | Remote</span></div>
+
+        <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
+          <div class="timeline-head px-4 pt-3 pb-3">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="co-icon" style="--co: #0ea5e9">
+                <img class="co-img" src="images/logo_vana.png" alt="Vana" onerror="this.style.display='none'">
+                Va
               </div>
-              <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">Jul 2022 - Present</div>
-                  <div>
-                      - Define new projects for the DS team based on company needs<br>
-                      - Create and maintain risk data science services<br>
-                      - Create models for micro-loan acceptance
-                  </div>
+              <div class="flex-grow-1 min-w-0">
+                <div class="timeline-role">Sr. Data Scientist</div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-company">Vana &middot; Remote</span>
+                </div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-date">Jul 2022 – Present</span>
+                  <span class="elapsed-badge" data-start="2022-07" data-end="present"></span>
+                </div>
               </div>
+            </div>
           </div>
-          <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="200">
-              <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Lecturer & Researcher <span class="text-muted h6">at Universidad San Carlos, Escuela de Ciencias Físicas y Matemáticas</span></div>
-              </div>
-              <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">Jan 2025 - Present</div>
-                  <!-- <div>Lecturing on bioinformatics software development basics.</div> -->
-              </div>
+          <div class="timeline-body px-4 pb-3">
+            <ul class="timeline-bullets">
+              <li>Define new projects for the DS team based on company needs</li>
+              <li>Create and maintain risk data science services</li>
+              <li>Build models for micro-loan acceptance</li>
+            </ul>
           </div>
-          <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="400">
-              <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Sr. Data Engineer/Data Scientist <span class="text-muted h6">at Zubale | Remote</span></div>
+        </div>
+
+        <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="150">
+          <div class="timeline-head px-4 pt-3 pb-3">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="co-icon" style="--co: #10b981">
+                <img class="co-img" src="images/logo_usac.png" alt="USAC" onerror="this.style.display='none'">
+                US
               </div>
-              <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">Mar 2021 - Jul 2022</div>
-                  <div>
-                      - Developed a forecasting model for in-store demand (100+ Stores)<br>
-                      - Assessed and interviewed new members of the DS team<br>
-                      - Collaborated in the development of a Python library for ETLs
-                  </div>
+              <div class="flex-grow-1 min-w-0">
+                <div class="timeline-role">Lecturer &amp; Researcher</div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-company">Universidad San Carlos &middot; Esc. Ciencias Físicas y Matemáticas</span>
+                </div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-date">Jan 2025 – Present</span>
+                  <span class="elapsed-badge" data-start="2025-01" data-end="present"></span>
+                </div>
               </div>
+            </div>
           </div>
-          <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="600">
-              <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Data Scientist <span class="text-muted h6">at HealthCare.inc | Guatemala</span></div>
-              </div>
-              <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">Jan 2020 - Mar 2021</div>
-                  <div>
-                      - Worked on ETL development using Python and SQL<br>
-                      - Created a machine learning model for cost and revenue forecast using PyTorch
-                  </div>
-              </div>
+          <div class="timeline-body px-4 pb-3">
+            <ul class="timeline-bullets">
+              <li>Programación 1</li>
+              <li>Electrónica Digital</li>
+            </ul>
           </div>
-          <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="800">
-              <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Data Scientist 1 <span class="text-muted h6">at Xoom, a PayPal Service | Guatemala</span></div>
+        </div>
+
+        <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="300">
+          <div class="timeline-head px-4 pt-3 pb-3">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="co-icon" style="--co: #8b5cf6">
+                <img class="co-img" src="images/logo_zubale.png" alt="Zubale" onerror="this.style.display='none'">
+                Zu
               </div>
-              <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">Apr 2018 - Dec 2019</div>
-                  <div>
-                      - Data wrangling and data pipelines for machine learning models using PySpark and TensorFlow
-                  </div>
+              <div class="flex-grow-1 min-w-0">
+                <div class="timeline-role">Sr. Data Engineer / Data Scientist</div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-company">Zubale &middot; Remote</span>
+                </div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-date">Mar 2021 – Jul 2022</span>
+                  <span class="elapsed-badge" data-start="2021-03" data-end="2022-07"></span>
+                </div>
               </div>
+            </div>
           </div>
-          <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="1000">
-              <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Big Data Engineer <span class="text-muted h6">at Xoom, a PayPal Service | Guatemala</span></div>
-              </div>
-              <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">Feb 2016 - Mar 2018</div>
-                  <div>
-                      - Developed data pipelines using PySpark and Hadoop
-                  </div>
-              </div>
+          <div class="timeline-body px-4 pb-3">
+            <ul class="timeline-bullets">
+              <li>Developed a forecasting model for in-store demand (100+ stores)</li>
+              <li>Assessed and interviewed new members of the DS team</li>
+              <li>Collaborated in the development of a Python library for ETLs</li>
+            </ul>
           </div>
+        </div>
+
+        <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="450">
+          <div class="timeline-head px-4 pt-3 pb-3">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="co-icon" style="--co: #ef4444">HC</div>
+              <div class="flex-grow-1 min-w-0">
+                <div class="timeline-role">Data Scientist</div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-company">HealthCare.inc &middot; Guatemala</span>
+                </div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-date">Jan 2020 – Mar 2021</span>
+                  <span class="elapsed-badge" data-start="2020-01" data-end="2021-03"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-body px-4 pb-3">
+            <ul class="timeline-bullets">
+              <li>ETL development using Python and SQL</li>
+              <li>ML model for cost and revenue forecasting using PyTorch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="600">
+          <div class="timeline-head px-4 pt-3 pb-3">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="co-icon" style="--co: #003087">
+                <img class="co-img" src="images/logo_xoom.png" alt="Xoom" onerror="this.style.display='none'">
+                Xo
+              </div>
+              <div class="flex-grow-1 min-w-0">
+                <div class="timeline-role">Data Scientist I</div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-company">Xoom, a PayPal Service &middot; Guatemala</span>
+                </div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-date">Apr 2018 – Dec 2019</span>
+                  <span class="elapsed-badge" data-start="2018-04" data-end="2019-12"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-body px-4 pb-3">
+            <ul class="timeline-bullets">
+              <li>Data wrangling and pipelines for ML models using PySpark and TensorFlow</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="750">
+          <div class="timeline-head px-4 pt-3 pb-3">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="co-icon" style="--co: #003087">
+                <img class="co-img" src="images/logo_xoom.png" alt="Xoom" onerror="this.style.display='none'">
+                Xo
+              </div>
+              <div class="flex-grow-1 min-w-0">
+                <div class="timeline-role">Big Data Engineer</div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-company">Xoom, a PayPal Service &middot; Guatemala</span>
+                </div>
+                <div class="timeline-meta mt-1">
+                  <span class="timeline-date">Feb 2016 – Mar 2018</span>
+                  <span class="elapsed-badge" data-start="2016-02" data-end="2018-03"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-body px-4 pb-3">
+            <ul class="timeline-bullets">
+              <li>Developed data pipelines using PySpark and Hadoop</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
-  </div>
+    </div>
   </div>
   <div class="shadow-1-strong bg-white my-5 p-5" id="education">
     <div class="education-section">
       <h2 class="h2 fw-light mb-4">Education</h2>
       <div class="timeline">
-          <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="0">
-              <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Master’s Degree in Mathematical Engineering and Computing <span class="text-muted h6">from UNIR - Universidad Internacional de La Rioja</span></div>
-              </div>
-              <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">2020 - 2022</div>
-                  <div>Specialized in mathematical engineering and computing, focusing on advanced computational techniques.</div>
-              </div>
+
+        <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="0">
+          <div class="timeline-head px-4 pt-3 pb-3">
+            <div class="timeline-role">Master’s Degree in Mathematical Engineering and Computing</div>
+            <div class="timeline-meta mt-1">
+              <span class="timeline-company timeline-company--edu">UNIR – Universidad Internacional de La Rioja</span>
+              <span class="timeline-date">2020 – 2022</span>
+            </div>
           </div>
-          <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="200">
-              <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Big Data and Artificial Intelligence Specialization <span class="text-muted h6">from UNIR - Universidad Internacional de La Rioja</span></div>
-              </div>
-              <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">2020 - 2021</div>
-                  <div>Focused on Big Data technologies and AI applications, including machine learning and data analysis.</div>
-              </div>
+          <div class="timeline-body px-4 pb-3">
+            <p class="timeline-desc">Specialized in mathematical engineering and computing, focusing on advanced computational techniques.</p>
           </div>
-          <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="400">
-              <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Bioinformatics Specialization <span class="text-muted h6">from Universidad San Carlos de Guatemala</span></div>
-              </div>
-              <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">2019</div>
-                  <div>Specialization in bioinformatics, focusing on computational biology and data analysis for biological data.</div>
-              </div>
+        </div>
+
+        <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="150">
+          <div class="timeline-head px-4 pt-3 pb-3">
+            <div class="timeline-role">Big Data and Artificial Intelligence Specialization</div>
+            <div class="timeline-meta mt-1">
+              <span class="timeline-company timeline-company--edu">UNIR – Universidad Internacional de La Rioja</span>
+              <span class="timeline-date">2020 – 2021</span>
+            </div>
           </div>
-          <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="600">
-              <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Computer Science Engineer <span class="text-muted h6">from Universidad San Carlos de Guatemala</span></div>
-              </div>
-              <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">2013</div>
-                  <div>Engineering degree with a focus on computer science, programming, and software development.</div>
-              </div>
+          <div class="timeline-body px-4 pb-3">
+            <p class="timeline-desc">Focused on Big Data technologies and AI applications, including machine learning and data analysis.</p>
           </div>
+        </div>
+
+        <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="300">
+          <div class="timeline-head px-4 pt-3 pb-3">
+            <div class="timeline-role">Bioinformatics Specialization</div>
+            <div class="timeline-meta mt-1">
+              <span class="timeline-company timeline-company--edu">Universidad San Carlos de Guatemala</span>
+              <span class="timeline-date">2019</span>
+            </div>
+          </div>
+          <div class="timeline-body px-4 pb-3">
+            <p class="timeline-desc">Specialization in bioinformatics — computational biology and data analysis for biological data.</p>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="450">
+          <div class="timeline-head px-4 pt-3 pb-3">
+            <div class="timeline-role">Computer Science Engineer</div>
+            <div class="timeline-meta mt-1">
+              <span class="timeline-company timeline-company--edu">Universidad San Carlos de Guatemala</span>
+              <span class="timeline-date">2013</span>
+            </div>
+          </div>
+          <div class="timeline-body px-4 pb-3">
+            <p class="timeline-desc">Engineering degree with a focus on computer science, programming, and software development.</p>
+          </div>
+        </div>
+
       </div>
-  </div>
+    </div>
   </div>
   <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio">
     <div class="portfolio-section">
@@ -591,7 +724,7 @@
 </div>
 </div></div>
     </div>
-    <footer class="pt-4 pb-4 text-muted text-center d-print-none">
+    <footer class="pt-4 pb-4 text-center d-print-none footer-main">
       <div class="container">
         <div class="my-3">
           <div class="h4">Erick Diaz</div>
