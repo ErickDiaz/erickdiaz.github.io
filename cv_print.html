@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Erick Díaz — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="css/font-awesome/css/all.min.css" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:    #0ea5e9;
+      --primary-dk: #0284c7;
+      --dark:       #0f172a;
+      --text:       #1e293b;
+      --muted:      #64748b;
+      --border:     #e2e8f0;
+      --tag-bg:     #e0f2fe;
+      --tag-text:   #0369a1;
+    }
+
+    /* ── Print page setup ───────────────────────────── */
+    @page {
+      size: letter;
+      margin: 0.42in 0.48in;
+    }
+
+    html, body {
+      background: #f1f5f9;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 8pt;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    /* ── Wrapper — letter-size card centered on screen ── */
+    .cv {
+      background: #fff;
+      width: 7.54in;
+      min-height: 10.16in;
+      margin: 0.3in auto;
+      padding: 0.38in 0.46in;
+      box-shadow: 0 4px 40px rgba(0,0,0,.14);
+    }
+
+    @media print {
+      html, body { background: #fff; }
+      .cv { margin: 0; padding: 0; box-shadow: none; width: 100%; }
+    }
+
+    /* ── HEADER ─────────────────────────────────────── */
+    .cv-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 9px;
+      border-bottom: 2.5px solid var(--primary);
+      margin-bottom: 11px;
+    }
+
+    .cv-photo {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2.5px solid var(--primary);
+      flex-shrink: 0;
+    }
+
+    .cv-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 19pt;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1;
+      letter-spacing: -0.5px;
+    }
+
+    .cv-title {
+      font-size: 8.5pt;
+      color: var(--primary);
+      font-weight: 600;
+      margin-top: 3px;
+      letter-spacing: 0.2px;
+    }
+
+    .cv-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px 12px;
+      margin-top: 5px;
+    }
+
+    .cv-contact {
+      font-size: 7pt;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      text-decoration: none;
+    }
+
+    .cv-contact i {
+      color: var(--primary);
+      font-size: 7pt;
+      width: 10px;
+      text-align: center;
+    }
+
+    /* ── BODY: two columns ──────────────────────────── */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 178px 1fr;
+      gap: 0 16px;
+    }
+
+    /* ── Sidebar ────────────────────────────────────── */
+    .cv-sidebar {
+      border-right: 1px solid var(--border);
+      padding-right: 14px;
+    }
+
+    /* ── Main ───────────────────────────────────────── */
+    .cv-main {
+      padding-left: 2px;
+    }
+
+    /* ── Section titles ─────────────────────────────── */
+    .sec {
+      font-family: 'Poppins', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2px;
+      margin: 9px 0 5px;
+    }
+
+    .sec:first-child { margin-top: 0; }
+
+    /* ── Skills ─────────────────────────────────────── */
+    .skill-group { margin-bottom: 4px; }
+
+    .skill-group-label {
+      font-size: 6.5pt;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+
+    .tag {
+      font-size: 6pt;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border-radius: 3px;
+      padding: 1px 5px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    /* ── Interests ──────────────────────────────────── */
+    .int-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .int-list li {
+      font-size: 7pt;
+      color: var(--muted);
+      padding: 1.5px 0 1.5px 9px;
+      position: relative;
+    }
+
+    .int-list li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* ── Education (sidebar) ────────────────────────── */
+    .edu-item { margin-bottom: 5px; }
+
+    .edu-degree {
+      font-size: 7pt;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .edu-school {
+      font-size: 6.5pt;
+      color: var(--primary);
+      margin-top: 1px;
+    }
+
+    .edu-year {
+      font-size: 6pt;
+      color: var(--muted);
+    }
+
+    /* ── About ──────────────────────────────────────── */
+    .about-text {
+      font-size: 7.5pt;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ── Experience ─────────────────────────────────── */
+    .exp-item {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 5.5px;
+    }
+
+    .co-badge {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 6px;
+      background: var(--co, #64748b);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 6.5pt;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .co-badge img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #fff;
+      padding: 3px;
+      border-radius: 6px;
+    }
+
+    .exp-role {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .exp-company {
+      font-size: 7pt;
+      color: var(--primary);
+      font-weight: 500;
+      margin-top: 1px;
+    }
+
+    .exp-date {
+      font-size: 6.5pt;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      margin-top: 2px;
+    }
+
+    .exp-bullets li {
+      font-size: 7pt;
+      color: #475569;
+      padding-left: 8px;
+      position: relative;
+      line-height: 1.45;
+    }
+
+    .exp-bullets li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* ── Research ───────────────────────────────────── */
+    .research-text {
+      font-size: 7.5pt;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .research-text a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ── Certifications ─────────────────────────────── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px 10px;
+    }
+
+    .cert-row {
+      display: flex;
+      gap: 4px;
+      align-items: baseline;
+      font-size: 6.5pt;
+      color: var(--muted);
+      padding: 1.5px 0;
+    }
+
+    .cert-year {
+      color: var(--primary);
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 6pt;
+    }
+  </style>
+</head>
+<body>
+<div class="cv">
+
+  <!-- ── HEADER ─────────────────────────────────────── -->
+  <header class="cv-header">
+    <img class="cv-photo" src="images/profile.jpeg" alt="Erick Díaz">
+    <div style="flex:1">
+      <div class="cv-name">Erick Díaz</div>
+      <div class="cv-title">Data Scientist | Lecturer at ECFM</div>
+      <div class="cv-contacts">
+        <a class="cv-contact" href="mailto:ewdiazsa@gmail.com">
+          <i class="far fa-envelope"></i> ewdiazsa@gmail.com
+        </a>
+        <span class="cv-contact">
+          <i class="fas fa-phone"></i> +502 53034179
+        </span>
+        <a class="cv-contact" href="http://erickdiazs.com">
+          <i class="fas fa-globe"></i> erickdiazs.com
+        </a>
+        <a class="cv-contact" href="https://linkedin.com/in/erickdiazs">
+          <i class="fab fa-linkedin"></i> erickdiazs
+        </a>
+        <a class="cv-contact" href="https://github.com/ErickDiaz">
+          <i class="fab fa-github"></i> ErickDiaz
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="cv-body">
+
+    <!-- ── SIDEBAR ──────────────────────────────────── -->
+    <aside class="cv-sidebar">
+
+      <div class="sec">Skills</div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Core</div>
+        <div class="tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">NLP</span>
+          <span class="tag">LLMs</span>
+          <span class="tag">Computer Vision</span>
+        </div>
+      </div>
+
+      <div class="skill-group" style="margin-top:3px">
+        <div class="skill-group-label">Languages</div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PySpark</span>
+          <span class="tag">SQL</span>
+          <span class="tag">R</span>
+        </div>
+      </div>
+
+      <div class="skill-group" style="margin-top:3px">
+        <div class="skill-group-label">Frameworks</div>
+        <div class="tags">
+          <span class="tag">TensorFlow</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Scikit-learn</span>
+        </div>
+      </div>
+
+      <div class="skill-group" style="margin-top:3px">
+        <div class="skill-group-label">Big Data</div>
+        <div class="tags">
+          <span class="tag">Apache Spark</span>
+          <span class="tag">Hadoop</span>
+          <span class="tag">Hive</span>
+          <span class="tag">HDFS</span>
+        </div>
+      </div>
+
+      <div class="sec">Interests</div>
+      <ul class="int-list">
+        <li>Machine Learning &amp; Deep Learning</li>
+        <li>NLP &amp; Generative AI</li>
+        <li>MLOps</li>
+        <li>Federated Learning</li>
+        <li>Bioinformatics</li>
+      </ul>
+
+      <div class="sec">Education</div>
+
+      <div class="edu-item">
+        <div class="edu-degree">M.Sc. Mathematical Engineering &amp; Computing</div>
+        <div class="edu-school">UNIR – Univ. Internacional de La Rioja</div>
+        <div class="edu-year">2020 – 2022</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">Big Data &amp; AI Specialization</div>
+        <div class="edu-school">UNIR – Univ. Internacional de La Rioja</div>
+        <div class="edu-year">2020 – 2021</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">Bioinformatics Specialization</div>
+        <div class="edu-school">Universidad San Carlos de Guatemala</div>
+        <div class="edu-year">2019</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">B.Sc. Computer Science Engineering</div>
+        <div class="edu-school">Universidad San Carlos de Guatemala</div>
+        <div class="edu-year">2013</div>
+      </div>
+
+    </aside>
+
+    <!-- ── MAIN ─────────────────────────────────────── -->
+    <main class="cv-main">
+
+      <div class="sec" style="margin-top:0">About</div>
+      <p class="about-text">
+        Data Scientist with 10+ years of experience in machine learning and data engineering. Currently leading the DS team at Vana and lecturing at ECFM (USAC). Published at ICLR 2020 Workshop. Passionate about applying AI to real-world and scientific challenges.
+      </p>
+
+      <div class="sec">Work Experience</div>
+
+      <div class="exp-item">
+        <div class="co-badge" style="--co:#0ea5e9">
+          <img src="images/logo_vana.png" alt="Vana" onerror="this.style.display='none'">Va
+        </div>
+        <div>
+          <div class="exp-role">Sr. Data Scientist</div>
+          <div class="exp-company">Vana &middot; Remote</div>
+          <div class="exp-date">Jul 2022 – Present &nbsp;·&nbsp; 3 yrs</div>
+          <ul class="exp-bullets">
+            <li>Technical Lead of the DS team — design and oversee data science projects</li>
+            <li>Risk scoring services and micro-loan acceptance models</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="co-badge" style="--co:#10b981">
+          <img src="images/logo_usac.png" alt="USAC" onerror="this.style.display='none'">US
+        </div>
+        <div>
+          <div class="exp-role">Lecturer &amp; Researcher</div>
+          <div class="exp-company">Universidad San Carlos &middot; ECFM</div>
+          <div class="exp-date">Jan 2025 – Present &nbsp;·&nbsp; 1 yr</div>
+          <ul class="exp-bullets">
+            <li>Programación 1 &nbsp;·&nbsp; Electrónica Digital</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="co-badge" style="--co:#8b5cf6">
+          <img src="images/logo_zubale.png" alt="Zubale" onerror="this.style.display='none'">Zu
+        </div>
+        <div>
+          <div class="exp-role">Sr. Data Engineer / Data Scientist</div>
+          <div class="exp-company">Zubale &middot; Remote</div>
+          <div class="exp-date">Mar 2021 – Jul 2022 &nbsp;·&nbsp; 1 yr 5 mos</div>
+          <ul class="exp-bullets">
+            <li>In-store demand forecasting model (100+ stores)</li>
+            <li>Python ETL library development; DS team hiring</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="co-badge" style="--co:#ef4444">HC</div>
+        <div>
+          <div class="exp-role">Data Scientist</div>
+          <div class="exp-company">HealthCare.inc &middot; Guatemala</div>
+          <div class="exp-date">Jan 2020 – Mar 2021 &nbsp;·&nbsp; 1 yr</div>
+          <ul class="exp-bullets">
+            <li>ETL development (Python / SQL) &nbsp;·&nbsp; Cost &amp; revenue forecast model (PyTorch)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="co-badge" style="--co:#003087">
+          <img src="images/logo_xoom.png" alt="Xoom" onerror="this.style.display='none'">Xo
+        </div>
+        <div>
+          <div class="exp-role">Data Scientist I &nbsp;/&nbsp; Big Data Engineer</div>
+          <div class="exp-company">Xoom, a PayPal Service &middot; Guatemala</div>
+          <div class="exp-date">Feb 2016 – Dec 2019 &nbsp;·&nbsp; 3 yrs 10 mos</div>
+          <ul class="exp-bullets">
+            <li>ML pipelines and data engineering using PySpark, TensorFlow, Hadoop</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sec">Research &amp; Publications</div>
+      <p class="research-text">
+        Computer vision system for automatic detection of <em>P. Vivax</em> malaria parasites using CNNs (U-Net, YOLO) in TensorFlow — 1,364 annotated images / 80K+ labeled cells.
+        <a href="https://pml4dc.github.io/iclr2020/program/pml4dc_45.html">ICLR 2020 Workshop Poster</a> &nbsp;·&nbsp;
+        <a href="https://github.com/ErickDiaz/bioinformatic_thesis_project/tree/dev">GitHub</a>
+      </p>
+
+      <div class="sec">Select Certifications</div>
+      <div class="cert-grid">
+        <div class="cert-row"><span class="cert-year">2025</span>Retrieval Augmented Generation — Coursera</div>
+        <div class="cert-row"><span class="cert-year">2020</span>Mathematics for Machine Learning — Coursera</div>
+        <div class="cert-row"><span class="cert-year">2024</span>Generative AI with LLMs — Coursera</div>
+        <div class="cert-row"><span class="cert-year">2020</span>Fundamentals of Reinforcement Learning — Coursera</div>
+        <div class="cert-row"><span class="cert-year">2019</span>Intro to TensorFlow for AI / ML / DL — Coursera</div>
+        <div class="cert-row"><span class="cert-year">2017</span>Neural Networks &amp; Deep Learning — deeplearning.ai</div>
+        <div class="cert-row"><span class="cert-year">2018</span>Machine Learning — Coursera</div>
+        <div class="cert-row"><span class="cert-year">2016</span>Hadoop &amp; Apache Spark — Coursera / Edx</div>
+      </div>
+
+    </main>
+  </div><!-- /cv-body -->
+</div><!-- /cv -->
+</body>
+</html>

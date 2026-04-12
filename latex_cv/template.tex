@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\profilepic{profile.jpeg} % Profile picture
+
+\cvname{Erick Díaz} % Your name
+\cvjobtitle{Data Scientist} % Job title/career
+
+\cvdate{} % Date of birth
+\cvaddress{} % Address
+\cvnumberphone{} % Phone number
+\cvsite{http://erickdiazs.com/} % Personal website
+\cvmail{erickdiazs} % LinkedIn username
+\cvgit{ErickDiaz} % GitHub username
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\Education{
+
+Master's Degree in Mathematical Engineering and Computing | 2020--2022
+\newline UNIR - Universidad Internacional de La Rioja
+
+\newline \newline Big Data and Artificial Intelligence Specialization | 2020--2021
+\newline UNIR - Universidad Internacional de La Rioja
+
+\newline \newline Bioinformatics Specialization | 2019
+\newline Universidad San Carlos de Guatemala
+
+\newline \newline Computer Science Engineer | 2013
+\newline Universidad San Carlos de Guatemala
+
+}
+
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+\skills{
+\textbf{Core Expertise:} Machine Learning, NLP, LLMs, Deep Learning, Computer Vision
+\newline \newline
+\textbf{Languages:} Python (7 yrs), PySpark, R
+\newline \newline
+\textbf{ML Frameworks:} TensorFlow, PyTorch, Scikit-learn
+\newline \newline
+\textbf{Big Data:} Apache Spark, Hadoop, Hive, HDFS
+\newline \newline
+\textbf{Databases:} SQL (6 yrs), Data Warehousing
+\newline \newline
+\textbf{Human Languages:} English, Spanish
+}
+
+
+%----------------------------------------------------------------------------------------
+%	 INTERESTS
+%----------------------------------------------------------------------------------------
+
+\interests{
+    Machine Learning \& Deep Learning
+    \newline NLP \& Generative AI
+    \newline MLOps
+    \newline Federated Learning
+    \newline Bioinformatics
+}
+
+\makeprofile % Print the sidebar
+
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\begin{twenty}
+    \twentyitem{Jul 2022\\Today}{Sr. Data Scientist --- Vana | Remote}{3 yrs}
+    {- Technical Lead of the DS team, designing and overseeing data science projects.\\
+     - Create and maintain risk data science services.\\
+     - Build models for micro-loan acceptance.}\\
+    \twentyitem{Jan 2025\\Today}{Lecturer \& Researcher --- USAC, Escuela de Ciencias Físicas y Matemáticas}{}{}\\
+    \twentyitem{Mar 2021\\Jul 2022}{Sr. Data Engineer/Data Scientist --- Zubale | Remote}{1 yr 5 mos}
+    {- Developed a forecasting model for in-store demand (100+ stores).\\
+     - Assessed and interviewed new members of the DS team.\\
+     - Collaborated on a Python library for ETLs.}\\
+    \twentyitem{Jan 2020\\Mar 2021}{Data Scientist --- HealthCare.inc | Guatemala}{1 yr}
+    {- ETL development using Python and SQL.\\
+     - ML model for cost and revenue forecasting using PyTorch.}\\
+    \twentyitem{Apr 2018\\Dec 2019}{Data Scientist 1 --- Xoom, a PayPal Service | Guatemala}{1 yr 9 mos}
+    {- Data wrangling and pipelines for ML models using PySpark and TensorFlow.}\\
+    \twentyitem{Feb 2016\\Mar 2018}{Big Data Engineer --- Xoom, a PayPal Service | Guatemala}{2 yrs 2 mos}
+    {- Developed data pipelines using PySpark and Hadoop.}\\
+\end{twenty}
+
+\section{Research Projects and Publications}
+
+Development of a computer vision system for automatic detection and classification of \textit{P. Vivax} malaria parasites in microscopic blood smear images. Used CNNs (U-Net, YOLO) in \textbf{TensorFlow} on a dataset of 1,364 annotated images (80K+ labeled cells). Presented at ICLR 2020 Workshop.
+
+\href{https://github.com/ErickDiaz/bioinformatic_thesis_project/tree/dev}{GitHub Repo} $\cdot$ \href{https://pml4dc.github.io/iclr2020/program/pml4dc_45.html}{ICLR 2020 Workshop Poster}
+
+\section{Select Certifications}
+
+\begin{twenty}
+    \twentyitem{2025}{Retrieval Augmented Generation (RAG)}{Coursera}{}
+    \twentyitem{2024}{Generative AI with Large Language Models (LLMs)}{Coursera}{}
+    \twentyitem{2020}{Mathematics for Machine Learning Specialization}{Coursera}{}
+    \twentyitem{2020}{Fundamentals of Reinforcement Learning}{Coursera}{}
+    \twentyitem{2019}{Intro to TensorFlow for AI, ML \& Deep Learning}{Coursera}{}
+    \twentyitem{2018}{Machine Learning}{Coursera}{}
+    \twentyitem{2017}{Neural Networks and Deep Learning}{deeplearning.ai}{}
+    \twentyitem{2016--2017}{Big Data, Hadoop \& Apache Spark}{Coursera / Edx}{}
+\end{twenty}
+
+
+\end{document}
