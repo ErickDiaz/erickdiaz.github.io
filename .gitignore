@@ -1,0 +1,22 @@
+# LaTeX build artifacts
+latex_cv/*.aux
+latex_cv/*.log
+latex_cv/*.out
+latex_cv/*.toc
+latex_cv/*.pdf
+
+# macOS
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node (if ever used)
+node_modules/
+
+# Environment files
+.env
+.env.*
