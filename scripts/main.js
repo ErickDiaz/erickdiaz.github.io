@@ -15,6 +15,47 @@ window.addEventListener('scroll', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  // ── GA4 event helpers ──────────────────────────────
+  function gtagEvent(name, params) {
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  }
+
+  // CV download
+  var cvBtn = document.querySelector('a[href="cv_print.html"]');
+  if (cvBtn) {
+    cvBtn.addEventListener('click', function () {
+      gtagEvent('cv_download');
+    });
+  }
+
+  // Hire Me CTA
+  var hireMeBtn = document.querySelector('a.btn-info[href="#contact"]');
+  if (hireMeBtn) {
+    hireMeBtn.addEventListener('click', function () {
+      gtagEvent('hire_me_click');
+    });
+  }
+
+  // Contact form submit
+  var contactForm = document.querySelector('form[action*="formspree"]');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function () {
+      gtagEvent('contact_form_submit');
+    });
+  }
+
+  // Certificate modal views
+  var certModal = document.getElementById('certModal');
+  if (certModal) {
+    certModal.addEventListener('show.bs.modal', function (event) {
+      var button = event.relatedTarget;
+      if (!button) return;
+      var certTitle = button.closest('.card-body')
+        ?.querySelector('.card-title')?.textContent?.trim();
+      gtagEvent('certificate_view', { cert_name: certTitle || 'unknown' });
+    });
+  }
+
   // ── Mobile nav toggle ──────────────────────────────
   const navToggle = document.getElementById('navToggle');
   const siteNav   = document.getElementById('siteNav');
