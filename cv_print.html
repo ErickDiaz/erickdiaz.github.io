@@ -23,7 +23,7 @@
     /* ── Print page setup ───────────────────────────── */
     @page {
       size: letter;
-      margin: 0.42in 0.48in;
+      margin: 0; /* eliminates browser URL header/footer */
     }
 
     html, body {
@@ -41,7 +41,6 @@
     .cv {
       background: #fff;
       width: 7.54in;
-      min-height: 10.16in;
       margin: 0.3in auto;
       padding: 0.38in 0.46in;
       box-shadow: 0 4px 40px rgba(0,0,0,.14);
@@ -49,17 +48,22 @@
 
     @media print {
       html, body { background: #fff; }
-      .cv { margin: 0; padding: 0; box-shadow: none; width: 100%; }
+      .cv {
+        margin: 0;
+        padding: 0.42in 0.48in; /* visual margins replacing @page margin */
+        box-shadow: none;
+        width: 100%;
+      }
     }
 
     /* ── HEADER ─────────────────────────────────────── */
     .cv-header {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding-bottom: 9px;
+      gap: 12px;
+      padding-bottom: 7px;
       border-bottom: 2.5px solid var(--primary);
-      margin-bottom: 11px;
+      margin-bottom: 8px;
     }
 
     .cv-photo {
@@ -114,8 +118,8 @@
     /* ── BODY: two columns ──────────────────────────── */
     .cv-body {
       display: grid;
-      grid-template-columns: 178px 1fr;
-      gap: 0 16px;
+      grid-template-columns: 170px 1fr;
+      gap: 0 14px;
     }
 
     /* ── Sidebar ────────────────────────────────────── */
@@ -139,7 +143,7 @@
       color: var(--primary);
       border-bottom: 1px solid var(--border);
       padding-bottom: 2px;
-      margin: 9px 0 5px;
+      margin: 7px 0 4px;
     }
 
     .sec:first-child { margin-top: 0; }
@@ -192,7 +196,7 @@
     }
 
     /* ── Education (sidebar) ────────────────────────── */
-    .edu-item { margin-bottom: 5px; }
+    .edu-item { margin-bottom: 4px; }
 
     .edu-degree {
       font-size: 7pt;
@@ -222,8 +226,8 @@
     /* ── Experience ─────────────────────────────────── */
     .exp-item {
       display: flex;
-      gap: 8px;
-      margin-bottom: 5.5px;
+      gap: 7px;
+      margin-bottom: 4px;
     }
 
     .co-badge {
@@ -322,7 +326,7 @@
       align-items: baseline;
       font-size: 6.5pt;
       color: var(--muted);
-      padding: 1.5px 0;
+      padding: 1px 0;
     }
 
     .cert-year {
@@ -357,6 +361,12 @@
         </a>
         <a class="cv-contact" href="https://github.com/ErickDiaz">
           <i class="fab fa-github"></i> ErickDiaz
+        </a>
+        <a class="cv-contact" href="https://orcid.org/0000-0002-2329-8394">
+          <i class="fab fa-orcid"></i> 0000-0002-2329-8394
+        </a>
+        <a class="cv-contact" href="https://ecfm.usac.edu.gt/drupal-10.1.2/node/649">
+          <i class="fas fa-university"></i> ecfm.usac.edu.gt
         </a>
       </div>
     </div>
@@ -477,7 +487,7 @@
         </div>
         <div>
           <div class="exp-role">Lecturer &amp; Researcher</div>
-          <div class="exp-company">Universidad San Carlos &middot; ECFM</div>
+          <a class="exp-company" href="https://ecfm.usac.edu.gt/drupal-10.1.2/node/649" style="text-decoration:none">Universidad San Carlos &middot; ECFM</a>
           <div class="exp-date">Jan 2025 – Present &nbsp;·&nbsp; 1 yr</div>
           <ul class="exp-bullets">
             <li>Programación 1 &nbsp;·&nbsp; Electrónica Digital</li>
